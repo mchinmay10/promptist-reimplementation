@@ -1,0 +1,94 @@
+# =========================
+# Python basics
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+.dist-info/
+
+# =========================
+# Virtual environments
+# =========================
+venv/
+.env/
+.venv/
+conda-env/
+env/
+
+# =========================
+# Jupyter / IPython
+# =========================
+.ipynb_checkpoints/
+*.ipynb~
+
+# =========================
+# OS-specific
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDEs / editors
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# PyTorch / ML artifacts
+# =========================
+checkpoints/
+runs/
+logs/
+wandb/
+tensorboard/
+*.pt
+*.pth
+*.ckpt
+
+# =========================
+# Hugging Face / ImageReward caches
+# =========================
+.cache/
+**/.cache/
+~/.cache/
+
+# =========================
+# Diffusion outputs / generated images
+# =========================
+outputs/
+generated_images/
+*.png
+*.jpg
+*.jpeg
+
+# =========================
+# Data files (custom datasets)
+# =========================
+data/raw/
+data/processed/
+*.jsonl
+*.csv
+
+# =========================
+# Large model downloads
+# =========================
+models/pretrained/
+stable_diffusion_weights/
+
+# =========================
+# Environment & secrets
+# =========================
+.env
+*.key
+*.token
+
+# =========================
+# Colab / runtime leftovers
+# =========================
+content/
