@@ -3,15 +3,23 @@ import torch
 from diffusion.sd_pipeline import StableDiffusionPipelineWrapper
 from rewards.reward_fn import CombinedReward
 from models.prompt_model import PromptOptimizer
+from models.tokenizer import load_tokenizer
 
 USER_PROMPT = "a cat sitting on a chair"
+MODEL_NAME = "gpt2"
 
 
 def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+    # Load tokenizer
+    tokenizer = load_tokenizer(MODEL_NAME)
+
     # Load prompt policy
-    policy = PromptOptimizer().to(device)
+    policy = PromptOptimizer(
+        model_name=MODEL_NAME,
+        tokenizer=tokenizer,
+    ).to(device)
     policy.train()
 
     optimizer = torch.optim.Adam(policy.parameters(), lr=1e-5)
