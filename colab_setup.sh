@@ -10,11 +10,11 @@ python3.10 -m venv /content/py310
 echo "Python version:"
 source /content/py310/bin/activate && python --version
 
-echo "Cloning git repo..."
-git clone https://github.com/mchinmay10/promptist-reimplementation.git
+# echo "Cloning git repo..."
+# git clone https://github.com/mchinmay10/promptist-reimplementation.git
 
-echo "Changing the working directory..."
-cd promptist-reimplementation/
+# echo "Changing the working directory..."
+# cd promptist-reimplementation/
 
 echo "Installing project requirements..."
 source /content/py310/bin/activate && pip install -r requirements.colab.txt
